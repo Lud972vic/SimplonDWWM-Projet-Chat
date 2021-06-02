@@ -1,15 +1,15 @@
 <div class="container">
-    <table class="table table-light table-striped">
+    <table class="table table-striped border">
         <thead>
             <tr>
-                <th scope="col">Date</th>
-                <th scope="col">Pseudo</th>
-                <th scope="col">Messages</th>
+                <th scope="col" hidden>Date</th>
+                <th scope="col" hidden>Pseudo</th>
+                <th scope="col" hidden>Messages</th>
             </tr>
         </thead>
         <tbody>
             <?php
-            for ($i = 0; $i < 10; $i++) {
+            for ($i = 0; $i < 5; $i++) {
             ?>
                 <tr>
                     <td><?= 'Date ' . $i  ?></td>
