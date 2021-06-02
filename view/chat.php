@@ -1,3 +1,9 @@
+<?php
+
+require('model/model.php');
+
+?>
+
 <div class="container">
     <table class="table table-striped border">
         <thead>
@@ -9,12 +15,14 @@
         </thead>
         <tbody>
             <?php
-            for ($i = 0; $i < 5; $i++) {
+            $data = findAll();
+
+            foreach ($data as $num => $row) {
             ?>
                 <tr>
-                    <td class="col-2"><?= 'Date ' . $i  ?></td>
-                    <td class="col-2"><?= 'Pseudo ' . $i  ?></td>
-                    <td class="col-8"><?= 'Message n°' . $i  ?></td>
+                    <td class="col-2"><?= $row['date'] ?></td>
+                    <td class="col-2"><?= $row['pseudo'] ?></td>
+                    <td class="col-8"><?= $row['content'] ?></td>
                 </tr>
             <?php
             }
