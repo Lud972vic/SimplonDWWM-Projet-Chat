@@ -1,7 +1,7 @@
 <?php
 
 //Ma connexion
-function  getDBConnection()
+function  getDB()
 {
     //Mes paramètres
     $user = "user_jur";
@@ -26,14 +26,14 @@ function  getDBConnection()
 
 function findAll()
 {
-    getDBConnection();
+    $db = getDB();
 
     $query = 'SELECT *
     FROM message 
     ORDER BY date DESC
     ';
 
-    $req = getDBConnection()->query($query);
+    $req = $db->query($query);
     $req->setFetchMode(PDO::FETCH_ASSOC);
     $tab = $req->fetchAll();
 

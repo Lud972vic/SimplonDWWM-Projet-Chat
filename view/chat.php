@@ -1,9 +1,3 @@
-<?php
-
-require('model/model.php');
-
-?>
-
 <div class="container">
     <table class="table table-striped border">
         <thead>
@@ -15,8 +9,6 @@ require('model/model.php');
         </thead>
         <tbody>
             <?php
-            $data = findAll();
-
             foreach ($data as $num => $row) {
             ?>
                 <tr>
