@@ -41,3 +41,18 @@ function findAll()
 
     return $tab;
 }
+
+function addMessage($pseudo, $message)
+{
+    $db = getDB();
+    require('functions/functions.php');
+
+    $pseudo_fe = validate($pseudo);
+    $message_fe = validate($message);
+
+    $query = $db->prepare('INSERT INTO message (pseudo, content) VALUES (:pseudo_fe, :message_fe)');
+    $query->execute([
+        'pseudo_fe' =>  $pseudo_fe,
+        'message_fe' => $message_fe
+    ]);
+}
