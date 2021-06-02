@@ -12,9 +12,9 @@
             for ($i = 0; $i < 5; $i++) {
             ?>
                 <tr>
-                    <td><?= 'Date ' . $i  ?></td>
-                    <td><?= 'Pseudo ' . $i  ?></td>
-                    <td><?= 'Message n°' . $i  ?></td>
+                    <td class="col-2"><?= 'Date ' . $i  ?></td>
+                    <td class="col-2"><?= 'Pseudo ' . $i  ?></td>
+                    <td class="col-8"><?= 'Message n°' . $i  ?></td>
                 </tr>
             <?php
             }

@@ -18,7 +18,7 @@
 <body>
     <div class="container mt-5">
         <div class="col-10 offset-1">
-            <h1 class="my-3"><i class="far fa-comments"></i> Live Chat Service Client Amazin</h1>
+            <h1 class="my-3"><i class="far fa-comments"></i> Live Chat Amazin</h1>
             <?php
             require('chat.php');
             require('form.php');
