@@ -9,12 +9,14 @@
         </thead>
         <tbody>
             <?php
+            require('functions/functions.php');
+
             foreach ($data as $num => $row) {
             ?>
                 <tr>
                     <td class="col-2"><?= $row['date'] ?></td>
-                    <td class="col-2"><?= $row['pseudo'] ?></td>
-                    <td class="col-8"><?= $row['content'] ?></td>
+                    <td class="col-2"><?= formatString($row['pseudo']) ?></td>
+                    <td class="col-8"><?= formatString($row['content']) ?></td>
                 </tr>
             <?php
             }

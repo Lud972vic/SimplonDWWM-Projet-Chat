@@ -45,10 +45,9 @@ function findAll()
 function addMessage($pseudo, $message)
 {
     $db = getDB();
-    require('functions/functions.php');
 
-    $pseudo_fe = validate($pseudo);
-    $message_fe = validate($message);
+    $pseudo_fe = $pseudo;
+    $message_fe = $message;
 
     $query = $db->prepare('INSERT INTO message (pseudo, content) VALUES (:pseudo_fe, :message_fe)');
     $query->execute([
