@@ -35,11 +35,11 @@ function findAll()
 
     $req = $db->query($query);
     $req->setFetchMode(PDO::FETCH_ASSOC);
-    $tab = $req->fetchAll();
+    $messages = $req->fetchAll();
 
     $req->closeCursor();
 
-    return $tab;
+    return $messages;
 }
 
 function addMessage($pseudo, $message)
@@ -53,5 +53,37 @@ function addMessage($pseudo, $message)
     $query->execute([
         'pseudo_fe' =>  $pseudo_fe,
         'message_fe' => $message_fe
+    ]);
+}
+
+function findAllMessages($search = null)
+{
+    $db = getDB();
+
+    $query = 'SELECT *
+    FROM message 
+    WHERE content LIKE :search
+    ORDER BY date DESC
+    ';
+
+    $req = $db->prepare($query);
+    $req->bindValue(':search', "%" . $search . "%", PDO::PARAM_STR);
+    $req->execute();
+    $req->setFetchMode(PDO::FETCH_ASSOC);
+    $messages = $req->fetchAll();
+
+    $req->closeCursor();
+
+    return $messages;
+}
+
+function deleteMessage($id)
+{
+    $db = getDB();
+
+    $query = $db->prepare('DELETE FROM message WHERE id = :id');
+
+    $query->execute([
+        'id' =>  $id,
     ]);
 }

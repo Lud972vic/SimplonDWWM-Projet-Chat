@@ -16,6 +16,23 @@
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.php">LiveChatAmazin</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="navbar-nav me-auto mb-2 mb-lg-0">
+                </div>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" name="search" placeholder="Rechercher" aria-label="Rechercher">
+                    <button class="btn btn-outline-dark" type="submit">Rechercher</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
     <div class="container mt-5">
         <div class="col-10 offset-1">
             <h1 class="my-3"><i class="far fa-comments"></i> Live Chat Amazin</h1>
