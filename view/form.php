@@ -3,7 +3,7 @@
         <div class="col-4">
             <div class="mb-3">
                 <label for="pseudo_fe" class="form-label" hidden>Pseudo</label>
-                <input type="text" class="form-control" id="pseudo_fe" name="pseudo_fe" placeholder="Entrer votre pseudo" required>
+                <input type="text" value="<?= isset($_POST['pseudo_fe']) ? $_POST['pseudo_fe'] : '' ?>" class="form-control" id="pseudo_fe" name="pseudo_fe" placeholder="Entrer votre pseudo" required>
             </div>
         </div>
         <div class="col-8">
