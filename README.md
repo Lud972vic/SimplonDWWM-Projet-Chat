@@ -1,6 +1,11 @@
 # SimplonDWWM-Projet-Chat
 Réalisation d'un chat en PHP/MySQL dans le cadre de ma formation DWWM sans identifcation 
 
-![Capture d’écran du 2021-06-02 18-05-15](https://user-images.githubusercontent.com/52196263/120514562-b9ed9800-c3cd-11eb-8798-7a14af5fb5b8.png)
-![Capture d’écran du 2021-06-02 18-07-08](https://user-images.githubusercontent.com/52196263/120514565-ba862e80-c3cd-11eb-93b9-6a15ca3080ca.png)
-![Capture d’écran du 2021-06-02 18-11-05](https://user-images.githubusercontent.com/52196263/120514788-f3be9e80-c3cd-11eb-913c-d84b5b449418.png)
+## Ajout un message
+![Capture d’écran du 2021-06-04 14-27-15](https://user-images.githubusercontent.com/52196263/120804932-7a49bc00-c545-11eb-8b8d-28089b6ab4a0.png)
+
+## Suppression d'un message
+![Capture d’écran du 2021-06-04 14-27-58](https://user-images.githubusercontent.com/52196263/120804935-7ae25280-c545-11eb-83d2-6efce3dd7b03.png)
+
+## Recherche les messages à partir d'un mot clés
+![Capture d’écran du 2021-06-04 14-28-52](https://user-images.githubusercontent.com/52196263/120804938-7b7ae900-c545-11eb-9c6c-0b89584feb09.png)
