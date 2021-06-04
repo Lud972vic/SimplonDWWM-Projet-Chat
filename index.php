@@ -8,8 +8,9 @@ if (isset($_POST['submit'])) {
     addMessage($_POST['pseudo_fe'], $_POST['message_fe']);
 }
 
-//Supprimer un message
+//Vérifie que l'id existe
 if (isset($_GET['delete'])) {
+    //On supprime un message
     deleteMessage($_GET['delete']);
 }
 

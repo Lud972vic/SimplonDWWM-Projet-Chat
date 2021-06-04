@@ -27,7 +27,7 @@
                 </div>
                 <form class="d-flex">
                     <input class="form-control me-2" type="search" name="search" placeholder="Rechercher" aria-label="Rechercher">
-                    <button class="btn btn-outline-dark" type="submit">Rechercher</button>
+                    <button class="btn btn-outline-primary" type="submit">Rechercher</button>
                 </form>
             </div>
         </div>
