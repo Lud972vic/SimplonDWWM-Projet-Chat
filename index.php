@@ -12,6 +12,7 @@ if (isset($_POST['submit'])) {
 if (isset($_GET['delete'])) {
     //On supprime un message
     deleteMessage($_GET['delete']);
+    $_POST['pseudo_fe'] = $_GET['pseudo'];
 }
 
 //Moteur de recherche
