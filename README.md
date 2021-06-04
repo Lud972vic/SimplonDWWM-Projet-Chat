@@ -9,3 +9,6 @@ Réalisation d'un chat en PHP/MySQL dans le cadre de ma formation DWWM sans iden
 
 ## Recherche les messages à partir d'un mot clés
 ![Capture d’écran du 2021-06-04 14-28-52](https://user-images.githubusercontent.com/52196263/120804938-7b7ae900-c545-11eb-9c6c-0b89584feb09.png)
+
+
+https://user-images.githubusercontent.com/52196263/120813283-095ad200-c54e-11eb-8d9d-2f23245f50ca.mp4
