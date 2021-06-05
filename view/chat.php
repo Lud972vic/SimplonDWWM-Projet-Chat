@@ -13,11 +13,11 @@
                 <?php
                 require('functions/functions.php');
 
-                echo 'Nombre de messages ' . count($messages) . ' - Les messages les plus récents sont en haut <i class="fas fa-sort-numeric-up"></i>';
+                echo 'Nombre de messages ' . count($messages) . ' - Les messages les plus récents sont en haut <i class="fas fa-sort-alpha-down-alt"></i>';
 
                 foreach ($messages as $num => $message) {
                 ?>
-                <div class="m-2"></div>
+                    <div class="m-2"></div>
                     <tr>
                         <td class="col-2"><?= $message['date'] ?></td>
                         <td class="col-2"><?= formatString($message['pseudo']) ?></td>
@@ -36,3 +36,5 @@
     </div>
 </div>
 <hr>
+<p>Soyez bienveillant dans vos messages <Soyez class="far fa-comment-dots"></Soyez>
+</p>

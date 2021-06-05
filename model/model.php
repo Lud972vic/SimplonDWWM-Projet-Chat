@@ -1,36 +1,14 @@
 <?php
 
-//Ma connexion
-function  getDB()
+require('bdd_connection.php');
+
+function findAll(): array
 {
-    //Mes paramètres
-    $user = "user_jur";
-    $pass = "Prootq8R8cd3CCu3";
-    $dbname = "simplon_live_chat_amazin";
-    $host = "localhost";
-
-    try {
-        $dsn = 'mysql:host=' . $host . ';dbname=' . $dbname;
-        $options = [
-            PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',
-            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
-        ];
-        $dbh = new PDO($dsn, $user, $pass, $options);
-
-        return $dbh;
-    } catch (PDOException $e) {
-        print "Erreur de connexion !: " . $e->getMessage() . "<br/>";
-        die();
-    }
-}
-
-function findAll()
-{
-    $db = getDB();
+    $db = getDBConnection();
 
     $query = 'SELECT *
     FROM message 
-    ORDER BY date DESC
+    ORDER BY id DESC
     ';
 
     $req = $db->query($query);
@@ -42,28 +20,26 @@ function findAll()
     return $messages;
 }
 
-function addMessage($pseudo, $message)
+function addMessage(string $pseudo, string $message): void
 {
-    $db = getDB();
-
-    $pseudo_fe = $pseudo;
-    $message_fe = $message;
+    $db = getDBConnection();
 
     $query = $db->prepare('INSERT INTO message (pseudo, content) VALUES (:pseudo_fe, :message_fe)');
     $query->execute([
-        'pseudo_fe' =>  $pseudo_fe,
-        'message_fe' => $message_fe
+        'pseudo_fe' =>  $pseudo,
+        'message_fe' => $message
     ]);
 }
 
-function findAllMessages($search = null)
+function findAllMessagesByKeyword(string $search = null): array
 {
-    $db = getDB();
+    $db = getDBConnection();
 
     $query = 'SELECT *
     FROM message 
     WHERE content LIKE :search
-    ORDER BY date DESC
+    OR pseudo LIKE :search
+    ORDER BY id DESC
     ';
 
     $req = $db->prepare($query);
@@ -77,9 +53,9 @@ function findAllMessages($search = null)
     return $messages;
 }
 
-function deleteMessage($id)
+function deleteMessage(int $id): void
 {
-    $db = getDB();
+    $db = getDBConnection();
 
     $query = $db->prepare('DELETE FROM message WHERE id = :id');
 

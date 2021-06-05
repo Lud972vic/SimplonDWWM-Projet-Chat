@@ -26,7 +26,7 @@
                 <div class="navbar-nav me-auto mb-2 mb-lg-0">
                 </div>
                 <form class="d-flex">
-                    <input class="form-control me-2" type="search" name="search" placeholder="Rechercher" aria-label="Rechercher">
+                    <input class="form-control me-2" type="search" name="search" placeholder="Mot clé ou pseudo" aria-label="Rechercher">
                     <button class="btn btn-outline-primary" type="submit">Rechercher</button>
                 </form>
             </div>
